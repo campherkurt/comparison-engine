@@ -1,0 +1,19 @@
+{
+  "name": "wearemonsters/comparison-engine",
+  "description": "A library for connecting with the Comparison Engine service",
+  "authors": [
+      {
+          "name": "Kurt Campher for We Are Monsters",
+          "homepage": "https://wearemonsters.co.za/"
+      }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+      "league/oauth2-client": "^1.1"
+  },
+  "autoload": {
+        "psr-0": {
+            "ComparisonEngine": "src/"
+        }
+  }
+}
