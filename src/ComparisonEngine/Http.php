@@ -16,7 +16,7 @@ class Http {
 
     public function __construct(){
       $this->httpClient = new Client();
-      echo "hey";
+      echo "hey!!!!";
       $this->authToken  = new AuthToken('1', '123456'); //These need to be environemnt variables
     }
 
