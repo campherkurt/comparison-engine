@@ -16,8 +16,7 @@ class Http {
 
     public function __construct(){
       $this->httpClient = new Client();
-      echo "hey!!!!";
-      $this->authToken  = new AuthToken('1', '123456'); //These need to be environemnt variables
+      $this->authToken  = new AuthToken('test_id', 'test_secret'); //These need to be environemnt variables
     }
 
     private function getApiUrl() {

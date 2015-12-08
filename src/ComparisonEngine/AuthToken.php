@@ -13,9 +13,9 @@ class AuthToken {
           'clientSecret'            => $clientSecret,    // The client password assigned to you by the provider
           // The info is not needed but expected.
           'redirectUri'             => 'http://tests.dev/outh2_client/redirect.php/',
-          'urlAuthorize'            => 'http://comparison-engine.dev/access_token',
-          'urlAccessToken'          => 'http://comparison-engine.dev/token',
-          'urlResourceOwnerDetails' => 'http://comparison-engine.dev/resource'
+          'urlAuthorize'            => 'http://comparison-engine.monsterlab.co.za/access_token',
+          'urlAccessToken'          => 'http://comparison-engine.monsterlab.co.za/token',
+          'urlResourceOwnerDetails' => 'http://comparison-engine.monsterlab.co.za/resource'
         ]);
     }
     public function getAuthToken() {

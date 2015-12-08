@@ -8,7 +8,7 @@ class Mobile {
         $this->http = $httpHandler;
         $this->http->setResource('mobile');
         $this->http->setApiVersion('1');
-        $this->http->setDomain('comparison-engine.dev');
+        $this->http->setDomain('comparison-engine.monsterlab.co.za');
     }
 
     public function getAllItems() {
