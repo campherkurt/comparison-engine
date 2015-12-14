@@ -14,9 +14,9 @@ class Http {
     private $httpProtocol = 'http';
     private $accessToken;
 
-    public function __construct(){
+    public function __construct($clientName, $clientSecret){
       $this->httpClient = new Client();
-      $this->authToken  = new AuthToken('test_id', 'test_secret'); //These need to be environemnt variables
+      $this->authToken  = new AuthToken($clientName, $clientSecret); //These need to be environemnt variables
     }
 
     private function getApiUrl() {
@@ -63,7 +63,7 @@ class Http {
              *   - Body Contents
              */
         }
-        throw new Exception('Api response is not json:' . $body->getContents());
+        throw new \Exception('Api response is not json:' . $body->getContents());
     }
 
     public function makeGetRequest($apiPath, array $params = []) {

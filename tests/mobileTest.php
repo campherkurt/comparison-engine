@@ -2,16 +2,15 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use \ComparisonEngine\Mobile;
-use \ComparisonEngine\Http;
+use \ComparisonEngine\Api;
 
 class mobileTests extends PHPUnit_Framework_TestCase
 {
 
     protected function setUp()
     {
-        $httpHandler  = new Http;
-        $this->mobile = new Mobile($httpHandler);
+        $api = new Api('test_id', 'test_secret');
+        $this->mobile = $api->getModel('mobile');
     }
 
     public function testGetAll()
