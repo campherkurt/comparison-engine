@@ -1,14 +1,14 @@
 <?php
-namespace ComparisonEngine;
+namespace ComparisonEngine\Resources;
 
-class Mobile {
+abstract class BaseModel {
     private $http;
 
-    function __construct(\ComparisonEngine\Http $httpHandler){
+    function __construct(\ComparisonEngine\Http $httpHandler, $model, $version = 1, $domain = 'comparison-engine.monsterlab.co.za'){
         $this->http = $httpHandler;
-        $this->http->setResource('mobile');
-        $this->http->setApiVersion('1');
-        $this->http->setDomain('comparison-engine.monsterlab.co.za');
+        $this->http->setResource($model);
+        $this->http->setApiVersion($version);
+        $this->http->setDomain($domain);
     }
 
     public function getAllItems() {
