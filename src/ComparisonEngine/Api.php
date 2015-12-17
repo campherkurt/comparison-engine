@@ -27,6 +27,9 @@ class Api {
             case 'bank_savings':
                 return new \ComparisonEngine\Resources\BankSavings($http);
                 break;
+            case 'bank_cheques':
+                return new \ComparisonEngine\Resources\BankCheque($http);
+                break;
         }
     }
 
