@@ -24,6 +24,9 @@ class Api {
             case 'broadband':
                 return new \ComparisonEngine\Resources\Broadband($http);
                 break;
+            case 'bank_savings':
+                return new \ComparisonEngine\Resources\BankSavings($http);
+                break;
         }
     }
 
