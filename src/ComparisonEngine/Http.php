@@ -14,9 +14,10 @@ class Http {
     private $httpProtocol = 'http';
     private $accessToken;
 
-    public function __construct($clientName, $clientSecret){
+    public function __construct($clientName, $clientSecret, $domain){
+      $this->domain = $domain;
       $this->httpClient = new Client();
-      $this->authToken  = new AuthToken($clientName, $clientSecret); //These need to be environemnt variables
+      $this->authToken  = new AuthToken($clientName, $clientSecret, $this->domain); //These need to be environemnt variables
     }
 
     private function getApiUrl() {
@@ -36,6 +37,10 @@ class Http {
 
     public function setDomain($domain) {
         $this->domain = $domain;
+    }
+
+    public function getDomain() {
+        return $this->domain;
     }
 
     public function setHttpProtocol($httpProtocol){
