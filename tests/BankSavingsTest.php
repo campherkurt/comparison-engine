@@ -9,7 +9,7 @@ class BankSavingsTests extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $api = new Api('test_id', 'test_secret');
+        $api = new Api('test_id', 'test_secret', 'comparison-engine.monsterlab.co.za');
         $this->model = $api->getModel('bank_savings');
     }
 

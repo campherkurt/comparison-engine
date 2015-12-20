@@ -6,14 +6,15 @@ class Api {
     private $clientName;
     private $clientSecret;
 
-    public function __construct($clientName, $clientSecret) {
+    public function __construct($clientName, $clientSecret, $serverDomain) {
        $this->clientName   = $clientName;
        $this->clientSecret = $clientSecret;
+       $this->serverDomain = $serverDomain;
        return $this;
     }
 
     public function getModel($model) {
-        $http = new \ComparisonEngine\Http($this->clientName, $this->clientSecret);
+        $http = new \ComparisonEngine\Http($this->clientName, $this->clientSecret, $this->serverDomain);
         switch ($model) {
             case 'mobile':
                 return new \ComparisonEngine\Resources\Mobile($http);
@@ -29,6 +30,9 @@ class Api {
                 break;
             case 'bank_cheques':
                 return new \ComparisonEngine\Resources\BankCheque($http);
+                break;
+            case 'bank_credit_cards':
+                return new \ComparisonEngine\Resources\BankCredit($http);
                 break;
         }
     }

@@ -6,16 +6,16 @@ use \League\OAuth2\Client\Provider\GenericProvider;
 class AuthToken {
     private $accessToken;
 
-    public function __construct($clientId, $clientSecret) {
+    public function __construct($clientId, $clientSecret, $domain) {
         $this->getStoredToken();
         $this->provider = new GenericProvider([
           'clientId'                => $clientId,    // The client ID assigned to you by the provider
           'clientSecret'            => $clientSecret,    // The client password assigned to you by the provider
           // The info is not needed but expected.
           'redirectUri'             => 'http://tests.dev/outh2_client/redirect.php/',
-          'urlAuthorize'            => 'http://comparison-engine.monsterlab.co.za/access_token',
-          'urlAccessToken'          => 'http://comparison-engine.monsterlab.co.za/token',
-          'urlResourceOwnerDetails' => 'http://comparison-engine.monsterlab.co.za/resource'
+          'urlAuthorize'            => 'http://' . $domain . '/access_token',
+          'urlAccessToken'          => 'http://' . $domain . '/token',
+          'urlResourceOwnerDetails' => 'http://' . $domain . '/resource'
         ]);
     }
     public function getAuthToken() {
