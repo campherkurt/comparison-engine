@@ -8,7 +8,7 @@ abstract class BaseModel {
         $this->http = $httpHandler;
         $this->http->setResource($model);
         $this->http->setApiVersion($version);
-        $this->http->setDomain($domain);
+        //$this->http->setDomain($domain);
     }
 
     public function getAllItems() {
