@@ -34,6 +34,9 @@ class Api {
             case 'bank_credit_cards':
                 return new \ComparisonEngine\Resources\BankCredit($http);
                 break;
+            case 'dating_site':
+                return new \ComparisonEngine\Resources\DatingSite($http);
+                break;
         }
     }
 
