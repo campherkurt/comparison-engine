@@ -1,7 +1,7 @@
 <?php
 namespace ComparisonEngine\Resources;
 
-use BaseModel;
+use \ComparisonEngine\Resources\BaseModel;
 
 class DatingSite extends BaseModel
 {
