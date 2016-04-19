@@ -37,6 +37,9 @@ class Api {
             case 'dating_site':
                 return new \ComparisonEngine\Resources\DatingSite($http);
                 break;
+            case 'casino':
+                return new \ComparisonEngine\Resources\Casino($http);
+                break;
         }
     }
 
