@@ -40,6 +40,9 @@ class Api {
             case 'casino':
                 return new \ComparisonEngine\Resources\Casino($http);
                 break;
+            case 'paid_tv':
+                return new \ComparisonEngine\Resources\PaidTV($http);
+                break;
         }
     }
 
